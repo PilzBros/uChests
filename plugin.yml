@@ -1,0 +1,30 @@
+name: uChests
+main: com.AustinPilz.UnusualChest.UnusualChest
+version: 1.5.1
+description: Unusual Chest commands!
+author: Austin Pilz
+website: http://uchests.austinpilz.com
+commands:
+    uchest:
+        description: Autorun commands
+    uc:
+        description: Autorun alias
+permissions:
+    uChest.*:
+        description: Gives access to all uChests commands
+        children:
+            uchest.admin: true
+            uchest.user: true
+            uchest.key: true
+        default: op
+    uChest.admin:
+        description: Gives admin access to uChest admin commands
+        children:
+            uchest.key: true
+        default: op
+    uChest.user:
+        description: Gives user level access to uChest commands
+        default: true
+    uChest.key:
+        description: Access to open uChests without keys
+        default: op
